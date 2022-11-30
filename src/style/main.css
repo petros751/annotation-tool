@@ -1,0 +1,45 @@
+.logoNavbar {
+    width: 2.5em !important;
+}
+
+.mainDiv {
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+  }
+
+.footer {
+    position: absolute;
+    width: 97%;
+    bottom: 7%;
+    margin-top: auto;
+    opacity: .5;
+    padding: 5px 15px;
+    height: 40px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+      
+.buildAndCopyright {
+    position: absolute;
+    top: 8vh;
+}
+
+.image:hover {
+    background: gray;
+    cursor: pointer;
+}
+
+img.ui.image {
+    margin: 3px;
+    display: inline-table;
+}
+
+.ui.menu {
+    border-radius:0%;
+}
+
+  
