@@ -1,5 +1,3 @@
-
-
 export const getAvaragePoint = (points) => {
     let totalX = 0;
     let totalY = 0;

@@ -26,6 +26,7 @@ const UploadImageComponent = () => {
       <Popup
         trigger={(
           <Button
+            data-testid='browse-button'
             primary
             as="label"
             content="Browse"
@@ -33,11 +34,13 @@ const UploadImageComponent = () => {
             type="button"
           />
         )}
+        data-testid='popup-message'
         content="Choose image to Upload"
         inverted
         position="bottom left"
       />
       <input
+        data-testid='file-input'
         type="file"
         id="pipe-data-file-step2"
         hidden
@@ -48,6 +51,7 @@ const UploadImageComponent = () => {
 
   const imgFilehandler = (e) => {
     const { files } = e.target;
+    if (!files[0]) return
     if (files[0] && files[0].type !== PNG && files[0].type !== JPEG && files[0].type !== JPG && files[0].type !== GIF) {
       return setErrorMessage(`You cannot upload ${files[0].type} type of file. Please try a png, jpeg, jpg or gif file.`);
     }
@@ -71,11 +75,12 @@ const UploadImageComponent = () => {
       {pipeFileSelectButton()}
       {errorMessage.length ? <Header.Subheader>{errorMessage}</Header.Subheader> : null}
       <hr />
-      {!imagefile.length ? <Icon name='images outline' /> : null}
+      {!imagefile.length ? <Icon data-testid="images-outline" name='images outline' /> : null}
       {imagefile.length ? <Header>Select image:</Header> : null}
       {imagefile.map((elem, i) => (
         <span key={i}>
           <Image
+            data-testid={'image'+i}
             src={elem.url}
             onClick={imageSelection}
             height="200"

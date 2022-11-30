@@ -17,8 +17,8 @@ const ResetModal = (props) => {
         props.handleClose();
     };
     return (
-        <div>
-            <Modal size="mini" open={props.modalOpen} data-cy="delete-modal">
+        <div data-testid='reset-modal'>
+            <Modal size="mini" open={props.modalOpen} data-testid="delete-modal">
                 <Modal.Header >Reset</Modal.Header>
                 <Modal.Content>
                     <div>
@@ -26,8 +26,8 @@ const ResetModal = (props) => {
                     </div>
                 </Modal.Content>
                 <Modal.Actions>
-                    <Button onClick={onCancel}>Cancel</Button>
-                    <Button basic onClick={onReset}>Reset</Button>
+                    <Button data-testid='reset-modal-cancel' onClick={onCancel}>Cancel</Button>
+                    <Button data-testid='reset-modal-reset' basic onClick={onReset}>Reset</Button>
                 </Modal.Actions>
             </Modal>
         </div>

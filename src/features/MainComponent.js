@@ -13,7 +13,7 @@ export default function MainComponent() {
                             <Grid.Column>
                                 <Segment placeholder>
                                     <Header icon>
-                                        <Icon name='cloud upload' />
+                                        <Icon data-testid='cloudUploadIcon' name='cloud upload' />
                                         <UploadImageComponent/>
                                     </Header>
                                 </Segment>
@@ -22,9 +22,9 @@ export default function MainComponent() {
                     </Grid>
                 </div>
 
-                <div className="footer">
+                <div className="footer" data-testid='footer'>
                     <div className="buildAndCopyright">
-                        <div>Copyright © 2022 P.Karkanis</div>
+                        <div data-testid="copyright">Copyright © 2022 P.Karkanis</div>
                     </div>
                 </div>
             </div>

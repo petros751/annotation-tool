@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, Dropdown, Icon } from 'semantic-ui-react';
+import { Menu } from 'semantic-ui-react';
 import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
@@ -8,13 +8,14 @@ const NavBar = () => {
     navigate('/');
   }
   return (
-    <Menu color="grey" inverted>
+    <Menu color="grey" inverted data-testid='navbar'>
       <Menu.Item>
-        <img className="logoNavbar" src="../icon.png" />
+        <img alt="logo" data-testid='img' className="logoNavbar" src="../logo192.png" />
       </Menu.Item>
       <Menu.Item
           name='home'
           onClick={handleHomeClick}
+          data-testid='home'
         >
           Home
         </Menu.Item>

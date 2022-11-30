@@ -19,7 +19,6 @@ const NextStepModal = (props) => {
         const currentIndex = _.findIndex(images, { url: props.url });
         if (images.length > 1 && currentIndex+1 !== images.length) {
             const newIndex = currentIndex + 1;
-            console.log('newIndex: '. currentIndex + 1);
             const activeUrl = images[newIndex];
             dispatch(setActiveImage(activeUrl.url));
         } else {
@@ -29,17 +28,17 @@ const NextStepModal = (props) => {
 
     };
     return (
-        <div>
-            <Modal size="mini" open={props.modalOpen} data-cy="delete-modal">
+        <div data-testid='next-step-modal'>
+            <Modal size="mini" open={props.modalOpen} data-testid="delete-modal">
                 <Modal.Header >Final Step</Modal.Header>
                 <Modal.Content>
                     <div>
                         Continue to edit next image or return back to home page?
-          </div>
+                    </div>
                 </Modal.Content>
                 <Modal.Actions>
-                    <Button onClick={onReturnBack}>Return Home</Button>
-                    <Button basic onClick={onNextImage}>Next Image</Button>
+                    <Button data-testid='next-step-return-btn-modal' onClick={onReturnBack}>Return Home</Button>
+                    <Button data-testid='next-step-next-btn-modal' basic onClick={onNextImage}>Next Image</Button>
                 </Modal.Actions>
             </Modal>
         </div>
