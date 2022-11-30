@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An interface where a user can annotate a set of images, and then view the results of their annotation. A user should be able to select image(s) they want to annotate, label each annotation, and have the ability to update or edit once completed.
 
-## Available Scripts
+## Installation
+1. Clone repo
+2. ``` npm install  ```
+3. ```npm run start ```
 
-In the project directory, you can run:
+## Technologies & Libraries
 
-### `npm start`
+The underlying technology that it used for this project is JavaScript. The frameworks that are used:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. User interface: [React.js][df1]
+2. State Managemnt: [Redux-Sagas][df2]
+3. UI/UX: [Semantic React][df3]
+4. Polygons: [Kanva.js][df4]
+5. Redux Logic: [Redux Toolkit][df5]
+6. Library for Routing: [React-Router][df6]
+7. Redux logging tool: [Redux Logger][df7]
+8. Testing End-to-End: [Cypress][df8]
+9. Unit testing: [Jest][df9]
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Application Functionalities
 
-### `npm test`
+**Upload Images:**
+The user can upload images in the application and he can choose one of them in order to edit.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Reset:**
+We can reset all the polygons from the image.
 
-### `npm run build`
+![reset](/reset.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Submit:**
+When we submit the new polygons we have two options either to continue with the next image if it's exist or return back to the Home page.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![submit](/submit.png)
 
-### `npm run eject`
+**Undo:**
+Undo the previous action on polygon.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Testing
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+For End-to-End testing we used the Cypress library.
+In order to run the tests run the command: ``` npx cypress open ```.
+In Cypress suite you can find the e2e.cy.js file for the End-to-End testing.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+For unit testing we used Jest.io, in order to run the tests run the command: ``` npm run test ```
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[df1]: <https://reactjs.org/>
+[df2]: <https://redux-saga.js.org/>
+[df3]: <https://react.semantic-ui.com/>
+[df4]: <https://konvajs.org/>
+[df5]: <https://redux-toolkit.js.org/>
+[df6]: <https://www.npmjs.com/package/react-router>
+[df7]: <https://github.com/LogRocket/redux-logger#readme>
+[df8]: <https://www.cypress.io/>
+[df9]: <https://jestjs.io/>
